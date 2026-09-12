@@ -19,6 +19,10 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: 运行规则校验器
+      - name: 运行单字规则校验
         run: |
           python3 rule_verify.py wubi86_basic.txt
+
+      - name: 运行词组规则校验
+        run: |
+          python3 rule_verify.py wubi86_phrases.txt
